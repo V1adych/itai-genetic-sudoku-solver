@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 def main():
-    with open("result.json", "r") as f:
+    with open("evaluation_result.json", "r") as f:
         histories = json.load(f)
 
     easy_history_sum = np.array([])
@@ -53,15 +53,15 @@ def main():
     hard_history_avg = hard_history_sum / hard_history_count
     
     plt.figure(figsize=(10, 5))
-    plt.plot(easy_history_avg[:200], label="Easy")
-    plt.plot(medium_history_avg[:200], label="Hard")
-    plt.plot(hard_history_avg[:200], label="Medium")
+    plt.plot(easy_history_avg[:650], label="Easy")
+    plt.plot(medium_history_avg[:650], label="Medium")
+    plt.plot(hard_history_avg[:650], label="Hard")
     plt.xlabel("Generation")
     plt.ylabel("AVG Fitness")
     plt.title("AVG Fitness vs Generation")
     plt.legend()
     plt.grid()
-    plt.savefig("plot.png")
+    plt.savefig("report/figures/plot.png")
     
     
 
