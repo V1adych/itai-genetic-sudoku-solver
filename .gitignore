@@ -1,0 +1,4 @@
+/report/*
+!/report/main.pdf
+!/report/main.tex
+!/report/figures/
