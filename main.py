@@ -4,15 +4,15 @@ import copy
 
 def read_puzzle(filename):
     puzzle = []
-    with open(filename, "r") as f:
-        for line in f:
-            row = []
-            for val in line.strip().split():
-                if val == "-" or val == "0":
-                    row.append(0)
-                else:
-                    row.append(int(val))
-            puzzle.append(row)
+    for i in range(9):
+        line = input().split()
+        row = []
+        for val in line:
+            if val == "-" or val == "0":
+                row.append(0)
+            else:
+                row.append(int(val))
+        puzzle.append(row)
     return puzzle
 
 
